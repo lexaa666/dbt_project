@@ -8,5 +8,5 @@
         flight_id,
         fare_conditions,
         amount
-      from {{ source('bookings', 'ticket_flights') }}
+      from {{ ref("stg_flights__ticket_flights") }}
     
