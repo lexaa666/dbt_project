@@ -52,6 +52,15 @@ sources:
             description: Дата бронирования
           - name: total_amount
             description: Полная сумма бронирования
+        freshness:
+          warn_after:
+            count: 6
+            period: hour
+          error_after:
+            count: 1
+            period: day
+          filter: "'2017-08-15'::date - book_date::date <= 1"
+        loaded_at_field: book_date
       - name: flights
         description: Рейсы
         columns:
