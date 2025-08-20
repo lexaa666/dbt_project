@@ -100,4 +100,26 @@ sources:
             description:  Дни недели, когда выполняются рейсы
 
       - name: ticket_flights
+        description: Билет и перелет
+        columns:
+          - name: ticket_no
+            description: Номер билета
+          - name: flight_id
+            description: Идентификатор рейса
+          - name: fare_conditions
+            description: Класс обслуживания
+          - name: amount
+            description: Стоимость перелета
       - name: tickets
+        description: Билеты
+        columns:
+          - name: ticket_no
+            description: Номер билета
+          - name: book_ref
+            description: Номер бронирования
+          - name: passenger_id
+            description: Идентификатор пассажира
+          - name: passenger_name
+            description: Имя пассажира
+          - name: contact_data
+            description: Контактные данные пассажира
