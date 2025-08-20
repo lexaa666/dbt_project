@@ -1,0 +1,103 @@
+sources:
+  - name: demo_src
+    tables:
+      - name: aircrafts
+        description: Самолеты
+        columns: 
+          - name: aircraft_code 
+            description:  Код самолета, IATA
+          - name: model 
+            description:  Модель самолета
+          - name: range 
+            description:  Максимальная дальность полета, км
+      - name: airports
+        description: Аэропорты
+        columns:
+          - name: airport_code
+            description: Код аэропорта
+          - name: airport_name
+            description: Название аэропорта
+          - name: city
+            description: Город 
+          - name: coordinates
+            description: Координаты аэропорта (долгота и широта)
+          - name: timezone
+            description: Часовой пояс аэропорта  
+      - name: seats
+        description: Место в самолете
+        columns:
+          - name: aircraft_code
+            description: Код самолета, IATA
+          - name: seat_no
+            description: Номер места
+          - name: fare_conditions
+            description: Класс обслуживания
+      - name: boarding_passes
+        description: Регистрации на рейс
+        columns:
+          - name: ticket_no
+            description: Номер билета
+          - name: flight_id
+            description: Идентификатор рейса
+          - name: boarding_no
+            description: Номер посадочного талона 
+          - name: seat_no
+            description: Номер места
+      - name: bookings
+        description: Бронирование
+        columns:
+          - name: book_ref
+            description: Номер бронирования
+          - name: book_date
+            description: Дата бронирования
+          - name: total_amount
+            description: Полная сумма бронирования
+      - name: flights
+        description: Рейсы
+        columns:
+          - name: flight_id
+            description: Идентификатор рейса
+          - name: flight_no
+            description: Номер рейса
+          - name: scheduled_departure
+            description: Время вылета по расписанию
+          - name: scheduled_arrival
+            description: Время прилёта по расписанию
+          - name: departure_airport
+            description: Аэропорт отправления
+          - name: arrival_airport
+            description: Аэропорт прибытия
+          - name: status
+            description: Статус рейса
+          - name: aircraft_code
+            description: Код самолета, IATA
+          - name: actual_departure
+            description: Фактическое время вылета
+          - name: actual_arrival
+            description: Фактическое время прилёта
+      - name: routes
+        description: Маршруты
+        columns: 
+          - name: flight_no 
+            description:  Номер рейса
+          - name: departure_airport 
+            description:  Номер рейса
+          - name: departure_airport_name 
+            description:  Название аэропорта отправления
+          - name: departure_city 
+            description:  Город отправления
+          - name: arrival_airport 
+            description:  Код аэропорта прибытия
+          - name: arrival_airport_name 
+            description:  Название аэропорта прибытия
+          - name: arrival_city 
+            description:  Город прибытия
+          - name: aircraft_code 
+            description:  Код самолета, IATA
+          - name: duration 
+            description:  Продолжительность полета
+          - name: days_of_week 
+            description:  Дни недели, когда выполняются рейсы
+
+      - name: ticket_flights
+      - name: tickets
