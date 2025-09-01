@@ -4,7 +4,7 @@
     )
 }}
       select
-          flight_id,
+        flight_id,
         flight_no,
         scheduled_departure,
         scheduled_arrival,
@@ -14,6 +14,5 @@
         aircraft_code,
         actual_departure,
         actual_arrival
-
       from {{ source('demo_src', 'flights')}}
     
